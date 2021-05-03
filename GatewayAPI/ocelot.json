@@ -51,6 +51,86 @@
       ],
       "UpstreamPathTemplate": "/api/market/company/delete/{companycode}",
       "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    //Register User
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/user/add",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/user/add",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //User Info
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/user/get/{userID}/{password}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/user/get/{userID}/{password}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //Verify UserID
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/user/verifyUserID/{userID}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/user/verifyUserID/{userID}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //Delete User
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/user/delete/{userID}/{password}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/user/delete/{userID}/{password}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    //Add Stock
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/stock/add/{companycode}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/stock/add/{companycode}",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //Get Stocks
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/stock/get/{companycode}/{startdate}/{enddate}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/stock/get/{companycode}/{startdate}/{enddate}",
+      "UpstreamHttpMethod": [ "GET" ]
     }
   ],
   "GlobalConfiguration": {
