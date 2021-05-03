@@ -1,5 +1,19 @@
 {
   "Routes": [
+    //Register Company
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/company/register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/company/register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //Company Info
     {
       "DownstreamPathTemplate": "/api/v1.0/market/company/info/{companycode}",
       "DownstreamScheme": "https",
@@ -10,7 +24,33 @@
         }
       ],
       "UpstreamPathTemplate": "/api/market/company/info/{companycode}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //Get All Company Info
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/company/getall",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/company/getall",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //Delete Company
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/company/delete/{companycode}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/company/delete/{companycode}",
+      "UpstreamHttpMethod": [ "DELETE" ]
     }
   ],
   "GlobalConfiguration": {
