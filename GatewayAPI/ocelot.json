@@ -134,6 +134,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5021"
+    "BaseUrl": "https://ocelot-gate-api.azurewebsites.net"
   }
 }
