@@ -1,0 +1,19 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/company/info/{companycode}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "estockmanagerapi.azurewebsites.net",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/market/company/info/{companycode}",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5021"
+  }
+}
